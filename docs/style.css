@@ -269,18 +269,17 @@ select option:disabled {
         width: 90%;
     }
 
-    /* Evita que los botones se apilen en columna */
     .tab-buttons {
-        flex-direction: row;  /* Se mantienen en fila */
-        flex-wrap: wrap;  /* Permite que pasen a otra línea si no caben */
+        display: flex;
+        flex-wrap: wrap; /* Permite que pasen a otra línea si no caben */
         justify-content: center; /* Centra los botones */
         gap: 10px; /* Espacio entre botones */
     }
 
     .tab-button {
-        flex: 1 1 45%; /* Cada botón ocupa casi la mitad del ancho */
-        min-width: 100px;
-        max-width: 140px;
+        flex: 1 1 auto; /* Permite que los botones se ajusten automáticamente */
+        min-width: 80px;
+        max-width: 33%; /* Se aseguran de que al menos 3 botones puedan aparecer en una fila */
         font-size: 14px;
         padding: 8px;
     }
@@ -302,18 +301,17 @@ select option:disabled {
         width: 90%;
     }
 
-    /* Mantiene los botones en fila, pero si es necesario, se apilan */
     .tab-buttons {
-        flex-direction: row; /* Se mantiene en fila */
-        flex-wrap: wrap; /* Permite que pasen a otra línea */
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 5px;
     }
 
     .tab-button {
-        flex: 1 1 48%; /* Se adaptan en dos columnas */
-        min-width: 80px;
-        max-width: 120px;
+        flex: 1 1 48%; /* Se distribuyen en dos columnas */
+        min-width: 70px;
+        max-width: 50%;
         font-size: 12px;
         padding: 6px;
     }
