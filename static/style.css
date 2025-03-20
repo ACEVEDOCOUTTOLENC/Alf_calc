@@ -271,15 +271,17 @@ select option:disabled {
 
     .tab-buttons {
         display: flex;
-        flex-wrap: wrap; /* Permite que pasen a otra línea si no caben */
+        flex-wrap: nowrap; /* Evita que los botones pasen a otra línea */
         justify-content: center; /* Centra los botones */
         gap: 10px; /* Espacio entre botones */
+        overflow-x: auto; /* Agrega desplazamiento horizontal si no caben */
+        white-space: nowrap; /* Evita saltos de línea */
     }
 
     .tab-button {
         flex: 1 1 auto; /* Permite que los botones se ajusten automáticamente */
         min-width: 80px;
-        max-width: 33%; /* Se aseguran de que al menos 3 botones puedan aparecer en una fila */
+        max-width: 150px; /* Ajusta el tamaño máximo */
         font-size: 14px;
         padding: 8px;
     }
@@ -303,15 +305,17 @@ select option:disabled {
 
     .tab-buttons {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap; /* Mantiene los botones en una sola línea */
         justify-content: center;
         gap: 5px;
+        overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+        white-space: nowrap;
     }
 
     .tab-button {
-        flex: 1 1 48%; /* Se distribuyen en dos columnas */
+        flex: 1 1 auto; /* Se distribuyen uniformemente */
         min-width: 70px;
-        max-width: 50%;
+        max-width: 120px;
         font-size: 12px;
         padding: 6px;
     }
