@@ -1,17 +1,13 @@
 /* Estilo para los iconos */
-/* Asegúrate de que los iconos sean lo suficientemente grandes y blancos */
 .social-icons i {
-    font-size: 40px;
-    /* Aumenta el tamaño de los iconos */
-    color: white;
-    /* Cambia el color de los iconos a blanco */
+    font-size: 40px; /* Aumenta el tamaño de los iconos */
+    color: white; /* Cambia el color de los iconos a blanco */
     transition: transform 0.3s ease;
 }
 
 /* Efecto de hover para agrandar los iconos */
 .social-icons i:hover {
-    transform: scale(1.2);
-    /* Aumenta el tamaño al pasar el mouse */
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el mouse */
 }
 
 /* Contenedor de los iconos de redes sociales */
@@ -21,14 +17,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 45px;
-    flex-wrap: wrap;
-    
-    /* Borde blanco con transparencia */
-    padding: 0 20px;
-    background: rgba(255, 255, 255, 0.3);
-    /* Fondo blanco con transparencia */
+    gap: 45px; /* Espacio entre los iconos */
+    flex-wrap: wrap; /* Permite que los iconos se ajusten a varias filas */
     padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 50px;
 }
 
@@ -36,7 +28,7 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('background1.png');
+    background-image: url('images/background1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -220,56 +212,7 @@ select option:disabled {
     transform: scale(1.1);
 }
 
-/* Diseño responsivo */
-@media (max-width: 768px) {
-    .login-wrap {
-        width: 90%;
-    }
 
-    .tab-buttons {
-        flex-direction: column;
-    }
-
-    .tab-button {
-        margin-bottom: 10px;
-    }
-
-    .login-form {
-        height: auto;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .login-wrap {
-        width: 90%;
-    }
-
-    .tab-buttons {
-        flex-direction: column;
-    }
-
-    .tab-button {
-        margin-bottom: 10px;
-        padding: 8px;
-    }
-
-    .form-content {
-        padding: 15px;
-    }
-
-    .group {
-        margin-bottom: 12px;
-    }
-
-    .input {
-        padding: 10px;
-    }
-
-    .button {
-        padding: 12px;
-    }
-}
 
 /* Estilos para el modal */
 .modal {
@@ -311,4 +254,78 @@ select option:disabled {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+/* ======= MEDIA QUERIES ======= */
+@media (max-width: 768px) {
+    .login-wrap {
+        width: 90%;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+    }
+
+    .tab-button {
+        margin-bottom: 10px;
+    }
+
+    .login-form {
+        padding: 10px;
+    }
+
+    
+    .social-icons {
+        width: 90%; /* Aumenta el ancho a 90% en pantallas más pequeñas */
+        gap: 30px; /* Reduce el espacio entre los iconos */
+    }
+
+    .social-icons i {
+        font-size: 35px; /* Reduce el tamaño de los iconos */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-wrap {
+        width: 90%;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+    }
+
+    .tab-button {
+        margin-bottom: 8px;
+        padding: 8px;
+    }
+
+    .form-content {
+        padding: 10px;
+    }
+
+    .group {
+        margin-bottom: 12px;
+    }
+
+    .input {
+        padding: 10px;
+    }
+
+    .button {
+        padding: 12px;
+    }
+
+    .modal-content-m {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .social-icons {
+        gap: 20px; /* Reduce aún más el espacio entre los iconos */
+    }
+
+    .social-icons i {
+        font-size: 30px; /* Reduce el tamaño de los iconos aún más */
+    }
 }
