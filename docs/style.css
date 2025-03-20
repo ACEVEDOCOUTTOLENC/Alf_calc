@@ -28,7 +28,7 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('background1.png');
+    background-image: url('images/background1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -81,20 +81,24 @@ body {
     align-items: center;
 }
 
-/* Botones de pestañas */
+/* Contenedor de los botones */
 .tab-buttons {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center; /* Centra los botones en línea */
+    flex-wrap: wrap; /* Permite que los botones pasen a una nueva línea si no caben */
     width: 100%;
     padding: 15px;
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    gap: 10px; /* Espacio entre botones */
 }
 
+/* Botón individual */
 .tab-button {
-    flex: 1;
+    flex: 1; /* Hace que los botones crezcan proporcionalmente */
+    min-width: 100px; /* Tamaño mínimo para que no se hagan muy pequeños */
+    max-width: 180px; /* Tamaño máximo para controlar su crecimiento */
     padding: 10px;
     background: #333;
     color: white;
@@ -104,17 +108,19 @@ body {
     text-align: center;
 }
 
+/* Hover */
 .tab-button:hover {
     background: #555;
     transform: scale(1.1);
 }
 
-/* Estilo para el botón activo */
+/* Botón activo */
 .tab-button.active {
-    background: #555; /* Se mantiene con el mismo fondo que el hover */
-    transform: scale(1.1); /* Se mantiene con el mismo tamaño agrandado */
-    color: white; /* Cambia el color del texto si lo deseas */
+    background: #555;
+    transform: scale(1.1);
+    color: white;
 }
+
 
 
 /* Contenedor de los formularios */
@@ -257,47 +263,59 @@ select option:disabled {
 }
 
 
-/* ======= MEDIA QUERIES ======= */
+/* 📱 Para pantallas menores a 768px */
 @media (max-width: 768px) {
     .login-wrap {
         width: 90%;
     }
 
+    /* Evita que los botones se apilen en columna */
     .tab-buttons {
-        flex-direction: column;
+        flex-direction: row;  /* Se mantienen en fila */
+        flex-wrap: wrap;  /* Permite que pasen a otra línea si no caben */
+        justify-content: center; /* Centra los botones */
+        gap: 10px; /* Espacio entre botones */
     }
 
     .tab-button {
-        margin-bottom: 10px;
+        flex: 1 1 45%; /* Cada botón ocupa casi la mitad del ancho */
+        min-width: 100px;
+        max-width: 140px;
+        font-size: 14px;
+        padding: 8px;
     }
 
-    .login-form {
-        padding: 10px;
-    }
-
-    
+    /* Ajustes para los íconos sociales */
     .social-icons {
-        width: 90%; /* Aumenta el ancho a 90% en pantallas más pequeñas */
-        gap: 30px; /* Reduce el espacio entre los iconos */
+        width: 90%;
+        gap: 30px;
     }
 
     .social-icons i {
-        font-size: 35px; /* Reduce el tamaño de los iconos */
+        font-size: 35px;
     }
 }
 
+/* 📱 Para pantallas menores a 480px */
 @media (max-width: 480px) {
     .login-wrap {
         width: 90%;
     }
 
+    /* Mantiene los botones en fila, pero si es necesario, se apilan */
     .tab-buttons {
-        flex-direction: column;
+        flex-direction: row; /* Se mantiene en fila */
+        flex-wrap: wrap; /* Permite que pasen a otra línea */
+        justify-content: center;
+        gap: 5px;
     }
 
     .tab-button {
-        margin-bottom: 8px;
-        padding: 8px;
+        flex: 1 1 48%; /* Se adaptan en dos columnas */
+        min-width: 80px;
+        max-width: 120px;
+        font-size: 12px;
+        padding: 6px;
     }
 
     .form-content {
@@ -322,10 +340,10 @@ select option:disabled {
     }
 
     .social-icons {
-        gap: 20px; /* Reduce aún más el espacio entre los iconos */
+        gap: 20px;
     }
 
     .social-icons i {
-        font-size: 30px; /* Reduce el tamaño de los iconos aún más */
+        font-size: 30px;
     }
 }
