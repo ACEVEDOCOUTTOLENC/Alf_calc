@@ -350,40 +350,4 @@ select option:disabled {
     }
 }
 
-/* 📱 Para dispositivos en orientación horizontal (landscape) */
-@media (orientation: landscape) {
-    .login-wrap {
-        max-width: 100%; /* Asegura que el login ocupe todo el ancho */
-    }
-
-    .social-icons {
-        width: 80%; /* Ajuste en función de la orientación */
-        gap: 5vw;
-    }
-
-    .social-icons i {
-        font-size: 6vw; /* Ajuste dinámico del tamaño */
-    }
-
-    .tab-buttons {
-        gap: 3vw; /* Ajuste para más espacio en dispositivos horizontales */
-    }
-
-    .tab-button {
-        min-width: 8vw;
-        max-width: 18vw;
-        padding: 1vw;
-        font-size: 3vw;
-    }
-
-    .input {
-        padding: 2vw;
-        font-size: 3vw;
-    }
-
-    .button {
-        width: 70%;
-        padding: 1.5vw;
-    }
-}
 
